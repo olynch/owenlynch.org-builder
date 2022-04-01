@@ -1,0 +1,78 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1648297722,
+        "narHash": "sha256-W+qlPsiZd8F3XkzXOzAoR+mpFqzm3ekQkJNa+PIh1BQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "0f8662f1319ad6abf89b3380dd2722369fc51ade",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "hakyll-sass-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1545090064,
+        "narHash": "sha256-/d0zQwWDjHYym8Wwp2GiybMLn4AYS52kpOAYTWRbZDw=",
+        "owner": "meoblast001",
+        "repo": "hakyll-sass",
+        "rev": "495060d23c2d99047c1448ded1f37fb0f88469e6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "meoblast001",
+        "ref": "release-0.2.4",
+        "repo": "hakyll-sass",
+        "type": "github"
+      }
+    },
+    "hakyll-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1601467679,
+        "narHash": "sha256-rWd5tSGyPB/vvlhOuDKC85onx2d5+lApTS1lqRJrwpg=",
+        "owner": "jaspervdj",
+        "repo": "hakyll",
+        "rev": "e9a8139152b166eae75083259fc3e824675de6fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jaspervdj",
+        "ref": "v4.13.4.1",
+        "repo": "hakyll",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1603791972,
+        "narHash": "sha256-nj2SvACFH+NERpye1kudcuygCcvnsZYv26M2+wgM5vE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "cd63096d6d887d689543a0b97743d28995bc9bc3",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "20.09",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "hakyll-sass-src": "hakyll-sass-src",
+        "hakyll-src": "hakyll-src",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

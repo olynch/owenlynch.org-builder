@@ -1,0 +1,45 @@
+name: owenlynch-org
+
+dependencies:
+    - base
+    - hakyll
+    - filepath
+    - pandoc
+    - pandoc-types
+    - containers
+    - directory
+    - process
+    - filepath
+    - bytestring
+    - pureMD5
+    - tagsoup
+    - blaze-markup
+    - blaze-html
+    - time
+    - old-locale
+    - uri-encode
+    - temporary
+    - text
+    - regex-pcre
+
+executables:
+  owenlynch-org:
+    main: app/Website.hs
+    ghc-options: -fwarn-unused-imports
+    dependencies:
+      - owenlynch-org
+
+  oldposts:
+    main: app/OldPosts.hs
+    ghc-options: -fwarn-unused-imports
+    dependencies:
+      - owenlynch-org
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Compilers
+    - Helpers
+
+default-extensions:
+    - OverloadedStrings
