@@ -40,7 +40,7 @@
           inputsFrom = builtins.attrValues self.packages.${system};
         };
 
-        hydraJobs.build = self.packages.${packageName};
+        hydraJobs.build = self.packages.${system}.${packageName};
       }
     );
 }
