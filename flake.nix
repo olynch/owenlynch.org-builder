@@ -17,7 +17,7 @@
   };
 
   outputs = { self, nixpkgs, flake-utils, hakyll-src, hakyll-sass-src }:
-    flake-utils.lib.eachSystem [ flake-utils.system.x86_64-linux ] (system:
+    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
         haskellPackages = pkgs.haskellPackages.extend (hsSelf: hsSuper: {
