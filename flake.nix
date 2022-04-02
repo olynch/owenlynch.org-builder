@@ -39,6 +39,8 @@
 
           inputsFrom = builtins.attrValues self.packages.${system};
         };
+
+        hydraJobs.build = config.package.${packageName};
       }
     );
 }
