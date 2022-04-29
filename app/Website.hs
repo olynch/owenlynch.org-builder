@@ -49,7 +49,13 @@ main =
     match "templates/*" $ compile templateBodyCompiler
     create ["rss.xml"] $ do
       route idRoute
-      compile $ feedCompiler (renderRssWithTemplates "templates/rss.xml" "templates/rss-item.xml")
+      compile $ do
+        bodyTemplate <- loadBody "templates/rss.xml"
+        itemTemplate <- loadBody "templates/rss-item.xml"
+        feedCompiler (renderRssWithTemplates bodyTemplate itemTemplate)
     create ["atom.xml"] $ do
       route idRoute
-      compile $ feedCompiler (renderAtomWithTemplates "templates/atom.xml" "templates/atom-item.xml")
+      compile $ do
+        bodyTemplate <- loadBody "templates/atom.xml"
+        itemTemplate <- loadBody "templates/atom-item.xml"
+        feedCompiler (renderAtomWithTemplates bodyTemplate itemTemplate)
