@@ -26,11 +26,6 @@ main =
     match "posts/*" $ do
       route cleanRoute
       compile makePost
-    match "output.md" $ do
-      route cleanRoute
-      compile $
-        pandocCompilerWith pandocReadOpts pandocWriteOpts
-          >>= standardFilter postCtx
     match "blog.md" $ do
       route cleanRoute
       compile $ do
@@ -43,6 +38,11 @@ main =
           >>= standardFilter postCtx
     match "index.md" $ do
       route makeHtmlRoute
+      compile $
+        pandocCompilerWith pandocReadOpts pandocWriteOpts
+          >>= standardFilter postCtx
+    match "*.md" $ do
+      route cleanRoute
       compile $
         pandocCompilerWith pandocReadOpts pandocWriteOpts
           >>= standardFilter postCtx
